@@ -3,36 +3,21 @@ import './App.css'; // Import your CSS file for styling
 import imageRight from './images/right.png';
 import imageLock from './images/lock1.jpeg';
 import imagecube2 from './images/cube2.jpeg';
-import imageLogo from './images/logo.png';
+// /import imageLogo from './images/logo.png';
 import imageProfile from './images/profile.jpeg';
 import RankCard from './components/rank';
-
+import Navbar from './components/navbar';
 
 function App() {
   return (
     <div className="App">
       <header>
-        <div className="logo">
-          <img className='ada' src={imageLogo} alt="Logo"/>
-          <h1>sololearn</h1>
-        </div>
-        <nav>
-          <ul>
-            <li><a href="#">Leaderboard</a></li>
-            <li><a href="#">Courses</a></li>
-            <li><a href="#">Code Playground</a></li>
-            <li><a href="#">Discuss</a></li>
-            <li><a href="#">Blog</a></li>
-            <li className='mt-[-2px]'><button>Go PRO</button></li>
-            <li className='mt-[-2px]'><p>465</p></li>
-            <li><img src={imageProfile} alt="Profile" /></li>
-          </ul>
-        </nav>
+      <Navbar/>
       </header>
       <div className="container ">
          <div className='left-side'>
             <h2>Leaderboard</h2>
-            <RankCard name="Person-xyz" xp={1000} avatar={imageProfile}/>
+            <RankCard  name="Person-xyz" xp={1000} avatar={imageProfile}/>
             <RankCard name="Person-abc" xp={100} avatar={imageProfile} />
             <RankCard name="Person-123" xp={900} avatar={imageProfile} />
         </div>
