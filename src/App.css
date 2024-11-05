@@ -40,8 +40,9 @@ header {
 h1 {
   margin-left: 60px;
   position: absolute;
-  top: 4px;
+  top: 5px;
   margin-bottom: 0px;
+  margin-top: 28px;
 }
 
 nav ul {
@@ -51,7 +52,7 @@ nav ul {
 }
 
 nav li {
-  margin-right: 50px;
+  margin-right: 25px;
 }
 
 nav a {
@@ -65,11 +66,12 @@ nav button {
   background-color: #f77f29;
   color: #fff;
   border: none;
-  padding: 10px 30px;
+  padding: 10px 20px;
   cursor: pointer;
   border-radius: 3px;
   margin-right: 20px;
   transition: background-color 0.3s ease;
+  margin-top: -7px;
 }
 
 nav button:hover {
@@ -81,14 +83,14 @@ nav img {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin-left: 130px;
+  margin-left: 120px;
 }
 
 nav p {
   color: blue;
   position: absolute;
   top: 30px;
-  margin-left: 120px;
+  margin-left: 110px;
 }
 
 .container {
@@ -196,7 +198,7 @@ nav p {
   margin-bottom: 1rem;
   height: 100px;
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
 }
 
 .a1 {
@@ -232,7 +234,7 @@ nav p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: 370px;
   width: 100%;
-  max-width: 350px;
+  max-width: 300px;
 }
 
 .earn-xp h2 {
@@ -244,7 +246,7 @@ nav p {
 
 .box {
   background-color: rgb(223, 221, 221);
-  width: 330px;
+  width: 280px;
   height: 60px;
   border-radius: 10px;
   padding-top: 8px;
@@ -263,7 +265,7 @@ nav p {
   display: flex;
   width: 40px;
   height: 30px;
-  padding-left: 270px;
+  padding-left: 230px;
 }
 .navbar-toggle {
   display: none;
@@ -285,9 +287,138 @@ a {
 ul {
   list-style: none;
 }
+/*--------------------------------------------------------------- Mobile devices (upto 399px)------------------------------------------------ */
+@media (max-width: 399px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-/*--------------------------------------------------------------- Mobile devices (up to 600px)------------------------------------------------ */
-@media (max-width: 600px) {
+  .left-side {
+    order: 1;
+    width: 100%;
+  }
+  .left-side h2 {
+    margin-left: -10px;
+    font-size: large;
+  }
+  .leaderboard {
+    max-width: 250px;
+    text-align: center;
+    font-weight: bold;
+    margin-left: -5px;
+    margin-top: 15px;
+  }
+  .user-info {
+    margin-left: -30px;
+  }
+
+  .right-side {
+    order: 2;
+    width: 100%;
+  }
+
+  .right-box,
+  .left-side {
+    padding: 0.5rem;
+  }
+  .navbar-icon {
+    display: none;
+  }
+  h1 {
+    margin-top: 4px;
+  }
+  .nav-menu {
+    display: block;
+    cursor: pointer;
+  }
+  header {
+    position: relative;
+  }
+  .nav-link {
+    width: 100vw;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fff;
+    padding: 0.5rem;
+  }
+  .nav-link ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .nav-link ul li {
+    padding: 0.25rem;
+    margin: auto;
+  }
+  .nav-link ul li a {
+    font-size: 1rem;
+    color: #000;
+  }
+  .nav-link ul li img {
+    width: 80px;
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+  }
+
+  .go-pro {
+    background-color: #ffa310;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 0px;
+    transition: background-color 0.3s;
+  }
+
+  .go-pro:hover {
+    background-color: #e59508;
+  }
+
+  .mercury-league {
+    margin-top: 30px;
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 0.25rem;
+    height: 80px;
+    width: 100%;
+    max-width: 250px;
+  }
+  .earn-xp {
+    background-color: #fff;
+    padding: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 300px;
+    width: 100%;
+    max-width: 250px;
+  }
+  .box {
+    background-color: rgb(223, 221, 221);
+    width: 230px;
+    height: 50px;
+    border-radius: 10px;
+    padding-top: 5px;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .box img {
+    margin-left: -60px;
+  }
+}
+
+/*--------------------------------------------------------------- Mobile devices (400px to 600px)------------------------------------------------ */
+@media (min-width: 400px) and (max-width: 600px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -325,7 +456,9 @@ ul {
   .navbar-icon {
     display: none;
   }
-
+  h1 {
+    margin-top: 6px;
+  }
   .nav-menu {
     display: block;
     cursor: pointer;
@@ -334,8 +467,9 @@ ul {
     position: relative;
   }
   .nav-link {
+    width: 600px;
     position: absolute;
-    top: 7rem;
+    top: 5rem;
     /* margin-top: 5rem; */
     right: 0;
     /* width: 100vw; */
@@ -344,7 +478,7 @@ ul {
     /* height: 100vh; */
     justify-items: center;
     align-items: center;
-    background-color: rgba(30, 27, 27, 0.5);
+    background-color: #fff;
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
@@ -354,7 +488,7 @@ ul {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: auto;
+    margin-left: 20px;
   }
   .nav-link ul li {
     padding-left: 0.5rem;
@@ -363,45 +497,70 @@ ul {
     padding-bottom: 0.25rem;
     margin: auto;
   }
+  .nav-link ul li a {
+    font-size: 1.25rem;
+    color: #000;
+  }
   .nav-link ul li img {
+    width: 100px;
     border-radius: 50%;
     aspect-ratio: 1/1;
   }
-  .mercury-league {
-    margin-top: 50px;
-    background-color: #fff;
-    padding: 0.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 0.25rem;
-    height: 100px;
-    width: 100%;
-    max-width: 300px;
+
+  .go-pro {
+    background-color: #ffa310;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 15px 50px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 0px;
+    transition: background-color 0.3s;
   }
-  .earn-xp {
-    background-color: #fff;
-    padding: 0.5rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 370px;
-    width: 100%;
-    max-width: 300px;
-  }
-  .box {
-    background-color: rgb(223, 221, 221);
-    width: 250px;
-    height: 60px;
-    border-radius: 10px;
-    padding-top: 5px;
-    text-align: left;
-    padding-left: 10px;
-  }
-  .box img {
-    margin-left: -80px;
+
+  .go-pro:hover {
+    background-color: #e59508;
+    .go-pro-btn {
+      display: inline-block;
+    }
+
+    .mercury-league {
+      margin-top: 50px;
+      background-color: #fff;
+      padding: 0.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      margin-bottom: 0.25rem;
+      height: 100px;
+      width: 100%;
+      max-width: 300px;
+    }
+    .earn-xp {
+      background-color: #fff;
+      padding: 0.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      height: 370px;
+      width: 100%;
+      max-width: 300px;
+    }
+    .box {
+      background-color: rgb(223, 221, 221);
+      width: 250px;
+      height: 60px;
+      border-radius: 10px;
+      padding-top: 5px;
+      text-align: left;
+      padding-left: 10px;
+    }
+    .box img {
+      margin-left: -80px;
+    }
   }
 }
 
-/* -----------------------------------------------------------------Tablets (601px to 900px)----------------------------------- */
+/* -----------------------------------------------------------------Tablets (600px to 900px)----------------------------------- */
 @media (min-width: 601px) and (max-width: 900px) {
   .container {
     display: flex;
@@ -414,18 +573,18 @@ ul {
     width: 100%;
   }
   .left-side h2 {
-    margin-left: -20px;
-    font-size: xxx-large;
+    margin-left: -10px;
+    font-size: xx-large;
   }
   .leaderboard {
     max-width: 450px;
     text-align: center;
     font-weight: bold;
     margin-left: -10px;
-    margin-top: -10px;
+    margin-top: 10px;
   }
   .user-info {
-    margin-left: -50px;
+    margin-left: -30px;
   }
 
   .right-side {
@@ -449,79 +608,87 @@ ul {
     position: relative;
   }
   .nav-link {
+    width: auto;
     position: absolute;
-    top: 7rem;
-    /* margin-top: 5rem; */
-    right: 0;
-    /* width: 100vw; */
+    top: 5rem;
+    right: 0.5rem;
     display: flex;
     flex-direction: column;
-    /* height: 100vh; */
-    justify-items: center;
     align-items: center;
-    background-color: rgba(30, 27, 27, 0.5);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    max-width: 300px;
+    background-color: #fff;
+    padding: 1rem;
   }
   .nav-link ul {
-    width: fit-content;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: auto;
+    margin-right: 0;
   }
   .nav-link ul li {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
+    padding: 0.5rem;
     margin: auto;
   }
+  .nav-link ul li a {
+    font-size: 1.25rem;
+    color: #000;
+  }
   .nav-link ul li img {
+    width: 80px;
     border-radius: 50%;
     aspect-ratio: 1/1;
   }
+  .go-pro {
+    background-color: #ffa310;
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+
   .mercury-league {
-    margin-top: 50px;
+    margin-top: 30px;
     background-color: #fff;
     padding: 0.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-bottom: 0.25rem;
     height: 100px;
-    /* width: 400px; */
-    max-width: 500px;
+    max-width: 400px;
   }
   .earn-xp {
     background-color: #fff;
     padding: 0.5rem;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    height: 370px;
+    height: 350px;
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
   }
   .box {
     background-color: rgb(223, 221, 221);
-    width: 450px;
+    width: 350px;
     height: 60px;
     border-radius: 10px;
-    padding-top: 5px;
+    padding: 5px 10px;
     text-align: left;
-    padding-left: 10px;
   }
   .box img {
-    margin-left: 100px;
+    margin-left: 20px;
   }
 }
-/*------------------------------------------------------ Desktop larger screens (900px to 1270)----------------------------- */
-@media (min-width: 900px) and (max-width: 1270px) {
+
+/*------------------------------------------------------ Desktops and larger screens (900px and above)----------------------------- */
+@media (min-width: 900px) and (max-width: 1023px) {
   .container {
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+  h1 {
+    margin-top: 15px;
+    margin-right: 10px;
   }
 
   .left-side {
@@ -554,54 +721,24 @@ ul {
     padding: 1rem;
   }
   .navbar-icon {
+    display: flex;
+    margin-left: 120px;
+  }
+  .nav-link {
     display: none;
   }
 
   .right-box {
     margin-left: -50px;
   }
-  .nav-menu {
+  /* .nav-menu {
     display: block;
     cursor: pointer;
-  }
+  } */
   header {
     position: relative;
   }
-  .nav-link {
-    position: absolute;
-    top: 7rem;
-    /* margin-top: 5rem; */
-    right: 0;
-    /* width: 100vw; */
-    display: flex;
-    flex-direction: column;
-    /* height: 100vh; */
-    justify-items: center;
-    align-items: center;
-    background-color: rgba(30, 27, 27, 0.5);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    max-width: 300px;
-  }
-  .nav-link ul {
-    width: fit-content;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-  }
-  .nav-link ul li {
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    margin: auto;
-  }
-  .nav-link ul li img {
-    border-radius: 50%;
-    aspect-ratio: 1/1;
-  }
+
   .mercury-league {
     margin-top: 100px;
     background-color: #fff;
@@ -634,12 +771,20 @@ ul {
   .box img {
     margin-left: -50px;
   }
+  .nav-link {
+    display: none;
+  }
 }
-/*------------------------------------------------------ Desktop larger screens (1270 above)----------------------------- */
-@media (min-width: 1024px) {
+@media (min-width: 1023px) {
   .container {
     display: flex;
     flex-direction: row;
     align-items: center;
+  }
+  .nav li {
+    margin-right: 10px;
+  }
+  .nav-link {
+    display: none;
   }
 }
